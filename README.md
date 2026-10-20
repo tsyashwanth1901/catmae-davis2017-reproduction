@@ -7,7 +7,7 @@ pretrained encoder extracts features, and the first-frame mask is propagated thr
 nearest-neighbour feature matching.
 
 Part of an M.Tech project on self-supervised video object segmentation (IIT Kharagpur).
-The next phase is training VideoMAC (sparse-convolution masked video pretraining) from scratch.
+The next phase is failure analysis and benchmark it against current SOTA memory-based VOS (XMem, Cutie, SAM2), Reproduce T-Core, then stress-test it against CATMAE failure cases.
 
 ## Results (DAVIS-2017 val, 30 videos)
 
