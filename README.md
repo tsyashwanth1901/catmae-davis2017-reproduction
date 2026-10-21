@@ -7,7 +7,7 @@ pretrained encoder extracts features, and the first-frame mask is propagated thr
 nearest-neighbour feature matching.
 
 Part of an M.Tech project on self-supervised video object segmentation (IIT Kharagpur).
-The next phase is failure analysis and benchmark it against current SOTA memory-based VOS (XMem, Cutie, SAM2), Reproduce T-Core, then stress-test it against CATMAE failure cases.
+The next phase is to benchmark it against current SOTA memory-based VOS (XMem, Cutie, SAM2), Reproduce T-Core, then stress-test it against CATMAE failure cases.
 
 ## Results (DAVIS-2017 val, 30 videos)
 
@@ -115,6 +115,10 @@ The patch gathers the context features for two target frames at a time inside
 `mem_efficient_batched_affinity` and frees each video's tensors before the next one starts. The
 tensors fed to the affinity computation were checked to be identical to the original on a small
 synthetic test; the full-run result is the table above.
+
+## Failure Analysis
+
+The sequences for which the model is failing are analysed and there found to be Persistant failures i.e., not fixed by finer patches and resolution-limited failures i.e., the failure cases in S/16 is resolved in S/8. For further analysis, refer `failure_analysis.md`.
 
 ## Contents
 
